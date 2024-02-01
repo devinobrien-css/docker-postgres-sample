@@ -31,17 +31,23 @@ To get started with `docker-postgres`, follow these steps:
     1. Execute the bash script included in this repo:
 
         ```bash
-        $ ./build.sh
+        $ bash build.sh
         ```
 
     2. Connect to the PostgreSQL database using your preferred client (e.g., `psql`, `pgAdmin`, etc.):
-
         - Host: `localhost`
         - Port: `5432`
         - Username: `postgres`
         - Password: ********
 
         You can now start using PostgreSQL in your development environment!
+
+    3. (optional) A destroy script has been included for your convenience
+
+        ```bash
+        $ bash destroy.sh
+        ```
+        > this script will remove all prior instantiated docker assets
 
     ### Self Service (cross-platform)
 
@@ -75,3 +81,30 @@ To get started with `docker-postgres`, follow these steps:
         You can now start using PostgreSQL in your development environment!
 
 >For more information and advanced usage, refer to the [official PostgreSQL documentation](https://www.postgresql.org/docs/).
+
+## Helpful Commands
+
+### List All Containers
+```bash
+$ docker ps
+```
+
+### Stop a Container
+```bash
+$ docker stop <container-credential>
+```
+
+### Kill a Container
+```bash
+$ docker kill <container-credential>
+```
+
+### Verify a Stopped Container
+```bash
+$ docker ps -a
+```
+
+### Remove a Stopped Container
+```bash
+$ docker rm
+```
